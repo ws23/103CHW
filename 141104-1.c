@@ -16,6 +16,11 @@ int main(){
 	}
 	
 	while(scanf("%d %d", &m, &n)!=EOF){
+		if(m>n){
+			i = m; 
+			m = n; 
+			n = i; 	
+		}
 		max = min = arr[m]; 
 		for(i=m+1;i<=n;i++){
 			max = arr[i]>max ? arr[i] : max; 
