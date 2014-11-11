@@ -55,7 +55,7 @@ int main(){
 		printf("%c", toUpper(str[i]));  
 	printf("\n"); 
 
-	printf("sum of alphabets: %d\n", countLetters(str)); 
+	printf("%d\n", countLetters(str)); 
 
 	reverseString(str); 
 	for(i=0;i<len;i++)
