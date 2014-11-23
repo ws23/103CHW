@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 
 void revStr(char *str){
 	char s[1000]; 
@@ -29,12 +30,15 @@ void catStr(char *dest, char *a, char *b){
 
 
 int main(){
-	char s1[1000], s2[1000], ans[2000]; 
+	char s1[1000]={}, s2[1000]={}, ans[2000]={}; 
 
 	while(scanf("%s %s", s1, s2)!=EOF){
 		revStr(s2); 
 		catStr(ans, s1, s2); 
 		printf("%s\n", ans); 
+		memset(s1, 0, sizeof(s1)); 
+		memset(s2, 0, sizeof(s2));
+		memset(ans, 0, sizeof(ans)); 
 	}
 	return 0; 
 }

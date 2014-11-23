@@ -5,15 +5,20 @@ int main(){
 	int i; 
 
 	while(scanf("%d", &n)!=EOF){
-		a = 1; 
-		b = 0; 
-
-		for(i=2;i<=n;i++){
-			f = a+b; 
-			b = a; 
-			a = f;  
+		if(n==0)
+			printf("0\n"); 
+		else if(n==1)
+			printf("1\n"); 
+		else{
+			a = 1; 
+			b = 0; 
+			for(i=2;i<=n;i++){
+				f = a+b; 
+				b = a; 
+				a = f;  
+			}
+			printf("%d\n", f); 
 		}
-		printf("%d\n", f); 
 	}
 	return 0; 	
 }
