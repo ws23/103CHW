@@ -6,16 +6,13 @@ int main(){
 
 	while(scanf("%d %d", &days, &week)!=EOF){ 
 		for(i=0;i<week-1;i++)
-			printf("%2s ", " "); 
+			printf("   "); 
 		for(i=1;i<days;i++){
+			printf("%3d", i);
 			if((i-1+week)%7==0)
-				printf("%2d\n", i);
-			else
-				printf("%2d ", i); 	
+				printf("\n"); 
 		}
-		printf("%2d", days); 
-		if((days-1+week)%7)
-			printf("\n"); 
+		printf("%3d\n", i); 
 	}
 	return 0; 	
 }
