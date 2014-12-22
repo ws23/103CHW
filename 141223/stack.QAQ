@@ -1,0 +1,13 @@
+#include "stackErr.h"
+#include <stdlib.h>
+#include <stdio.h>
+
+void stack_overflow(){
+	printf("Expression is too complex\n");
+	exit(EXIT_FAILURE);
+}
+
+void stack_underflow(){
+	printf("Not enough operands in expression\n");
+	exit(EXIT_FAILURE);
+}
