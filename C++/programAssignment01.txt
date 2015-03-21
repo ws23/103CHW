@@ -1,0 +1,1 @@
+Write a program that reads in the text from the given file "programAssignment01.txt" and outputs each word to the console but replaces any occurrence of letter 'c' with 'C' and 'C' with 'c'. 
