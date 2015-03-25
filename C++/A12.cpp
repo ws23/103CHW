@@ -21,11 +21,17 @@ class Fraction{
 int main(){
 	Fraction *num = new Fraction(20, 60); 
 
+	cout << "Num = " << num->getNumerator() << "/" << num->getDenominator() << endl; 
 	cout << "The value of num is " << num->getValue() << endl; 
 	cout << "The fraction is " << num->toLowest().getNumerator() << "/" << num->toLowest().getDenominator() << endl; 
 	num->setNumerator(100); 
 	num->setDenominator(200); 
 
+	cout << endl; 
+
+	cout << "Num = "; 
+	num->display(); 
+	cout << endl; 
 	cout << "The value of num is " << num->getValue() << endl; 
 	cout << "The fraction is "; 
 	num->toLowest().display(); 
