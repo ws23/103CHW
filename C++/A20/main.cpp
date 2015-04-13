@@ -11,7 +11,7 @@ int main(){
 	
 	ts2 = ts5; 
 	ts2 = ts2; 
-	
+
 	showStudent(ts2); 
 	cout << "Show student again\n"; 
 	showStudent(ts2); 

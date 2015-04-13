@@ -6,8 +6,6 @@ Student::Student(){
 
 Student::Student(const std::string namePara, const int numClassesPara): name(namePara), numClasses(numClassesPara){
 	classList = new std::string[numClasses]; 
-
-	std::cout << "1. " << classList << std::endl; 
 	
 	for(int i=0;i<numClasses;i++)
 		classList[i] = "ClassName" + std::to_string(i); 	
@@ -16,8 +14,6 @@ Student::Student(const std::string namePara, const int numClassesPara): name(nam
 
 Student::Student(const Student &stu): name(stu.name), numClasses(stu.numClasses){
 	classList = new std::string[numClasses]; 
-
-	std::cout << "2. " << classList << std::endl; 
 
 	for(int i=0;i<numClasses;i++)
 		classList[i] = stu.classList[i]; 
@@ -46,16 +42,13 @@ std::string Student::getClassList() const {
 }
 
 Student& Student::operator = (const Student &stu){
-	name = stu.name; 
-	numClasses = stu.numClasses; 
-	classList = new std::string[numClasses]; 
+	if(this!=&stu){
+		name = stu.name; 
+		numClasses = stu.numClasses; 
+		classList = new std::string[numClasses]; 
 
-	std::cout << "3. " << classList << std::endl; 
-
-	for(int i=0;i<numClasses;i++){
-		std::cout << "stu.classList[" << i << "] = " << stu.classList[i] << std::endl; 
-		classList[i] = stu.classList[i];
-		std::cout << "classList[" << i << "] = " << classList[i] << std::endl; 
+		for(int i=0;i<numClasses;i++)
+			classList[i] = stu.classList[i];
 	}
 	return *this; 
 }
